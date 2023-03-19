@@ -2,16 +2,12 @@ function getTotalBooksCount(books) {
 return books.length; 
 }
 
-function getTotalAccountsCount(accounts) {
-   // Start a counter variable at 0
-     let counter = 0;
-     // Loop through the people
-     for (let i = 0; i < accounts.length; i++) {
-       // For each person, add 1 to the counter
-       counter += 1;
-     }
-      // After the loop, return the counter
-     return counter;   
+function getTotalAccountsCount(accounts) { //sorts through the database and returns a number that represents the total number of accounts
+  const numberOfAccounts = accounts.reduce((account) => {
+    account = accounts.map((account) => account);
+    return account.length;
+  }, 0);
+  return numberOfAccounts;
 }
 
 
