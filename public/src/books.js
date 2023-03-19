@@ -1,12 +1,24 @@
-function findAuthorById(authors, id) {
-  let foundAuthor = authors.find((author) => author.id === id);
-  return foundAuthor;
+
+function findById(array, id) {
+   let found = array.find((item) => item.id === id);
+   return found;
 }
 
-function findBookById(books, id) {
-let foundBooks = books.find((book) => book.id === id);
-  return foundBooks;
+function findAuthorById(authors, id){
+   return findById(authors, id);
 }
+
+
+
+function findById(array, id) {
+   let found = array.find((item) => item.id === id);
+   return found;
+}
+
+function findBookById(books, id){
+   return findById(books, id);
+}
+
 
 function partitionBooksByBorrowedStatus(books) {
  let booksReturned = books.filter((book) =>
@@ -30,6 +42,7 @@ function partitionBooksByBorrowedStatus(books) {
   })
   .slice(0, 10);
 }
+
 
 
 module.exports = {
